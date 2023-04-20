@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const Section = ({
   title,
@@ -11,19 +12,27 @@ const Section = ({
   return (
     <Wrapper bgImage={backgroundImg}>
       <Itemheader>
-        <h1> {title}</h1>
-        <p>{discription}</p>
+        <Fade bottom>
+          <h1> {title}</h1>
+          <p>{discription}</p>
+        </Fade>
       </Itemheader>
       <Buttons>
-        <ButtonsGroup>
-          <LeftButton>{leftBtntext}</LeftButton>
-          {rightBtntext && <RightButton>{rightBtntext}</RightButton>}
-        </ButtonsGroup>
-        <Downarrow src="./images/down-arrow.svg" />
+        <Fade bottom>
+          <ButtonsGroup>
+            <LeftButton>{leftBtntext}</LeftButton>
+            {rightBtntext && <RightButton>{rightBtntext}</RightButton>}
+          </ButtonsGroup>
+        </Fade>
+        <Fade bottom>
+          <Downarrow src="./images/down-arrow.svg" />
+        </Fade>
       </Buttons>
     </Wrapper>
   );
 };
+
+export default Section;
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -40,6 +49,12 @@ const Wrapper = styled.div`
 const Itemheader = styled.div`
   padding-top: 15vh;
   text-align: center;
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-weight: 600;
+  }
 `;
 const Buttons = styled.div`
   display: flex;
@@ -50,7 +65,7 @@ const Buttons = styled.div`
 const ButtonsGroup = styled.div`
   display: flex;
   margin-bottom: 35px;
-  @media (max-width: 570px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -96,5 +111,3 @@ const Downarrow = styled.img`
     }
   }
 `;
-
-export default Section;

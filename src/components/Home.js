@@ -12,24 +12,12 @@ function Home() {
             key={carInfo.id}
             title={carInfo.title}
             discription={carInfo.description}
-            leftBtntext="Custom Order"
-            rightBtntext="Existing Inventory"
+            leftBtntext={carInfo.leftButton}
+            rightBtntext={carInfo.rightButton}
             backgroundImg={carInfo.image}
           />
         );
       })}
-      <Section
-        title="Solar for New Roofs"
-        discription="Solar Roofs Costs Less than a New Roofs Plus Solar Panels"
-        leftBtntext="Order now"
-        rightBtntext="Learn more"
-        backgroundImg="solar-roof.jpg"
-      />
-      <Section
-        title="Accessories"
-        leftBtntext="Shop now"
-        backgroundImg="Accessories.jpg"
-      />
     </Container>
   );
 }

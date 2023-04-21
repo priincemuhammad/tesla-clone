@@ -74,6 +74,9 @@ const Header = () => {
           <a href="#">Powerwall</a>
         </li>
         <li>
+          <a href="#">Accessories</a>
+        </li>
+        <li>
           <a href="#">Existing Inventory</a>
         </li>
         <li>
@@ -113,12 +116,12 @@ const Menu = styled.div`
   flex: 1;
   a {
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     flex-wrap: nowrap;
     text-transform: uppercase;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;
@@ -131,7 +134,7 @@ const Rightmenu = styled.div`
   }
   a {
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     flex-wrap: nowrap;
     text-transform: uppercase;
